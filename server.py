@@ -3,27 +3,6 @@ import thread
 from socket import*
 
 
-buff_size = 1024   
-if len(sys.argv) < 2 or type(int(sys.argv[1])) != int:
-    print("Please, enter an appropiate port number!")
-    sys.exit()
-serverPort = int(sys.argv[1]) 
-def listenToClient(connectionSocket, addr):        #this function is used for the thread
-    try:
-        getRequest = connectionSocket.recv(buff_size).decode()
-       # file = getRequest.split()[1]               #divides the first line
-       # f = open(file[1:])                         #opens the path
-       # data = f.read()
-        response =  getRequest
-	print('From Client: ', response)
-        #for i in range(0, len(response)):
-	if (response == "How are you?"):
-		response = "Good and you?"
-        mport sys
-import thread
-from socket import*
-
-
 buff_size = 1024
 if len(sys.argv) < 2 or type(int(sys.argv[1])) != int:
     print("Please, enter an appropiate port number!")
